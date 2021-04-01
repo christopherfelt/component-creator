@@ -20,6 +20,28 @@ class ComponentCreator {
       }
     );
   }
+
+  createNewControllerFile() {
+    let controllerText = "//This is a new controller";
+    fs.writeFile(
+      this.newComponentPath + "controller.js",
+      controllerText,
+      function (err) {
+        if (err) throw err;
+      }
+    );
+  }
+
+  createNewServiceFile() {
+    let serviceText = "//This is a new service";
+    fs.writeFile(
+      this.newComponentPath + "service.js",
+      serviceText,
+      function (err) {
+        if (err) throw err;
+      }
+    );
+  }
 }
 
 module.exports.ComponentCreator = ComponentCreator;
